@@ -4,14 +4,36 @@
 <html lang="en">
     <head>
         <title>T-Capsule</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="Orbital-style.css">
+        <script>
+            //const t_created = t_current.getHours() + ":" + t_current.getMinutes() + ":" + t_current.getSeconds();
+            //var ct = new Date().toLocaleString();
+            document.querySelector('h3').innerHTML = time;
+            function display_c(){
+                var refresh=1000; // Refresh rate in milli seconds
+                //in this case, the clock will update every second 
+                mytime=setTimeout('display_ct()',refresh)
+            }
+             function display_ct() {
+                var x = new Date();
+                document.getElementById('ct').innerHTML = x;
+                display_c();
+            }
+
+        </script>
     </head>
-    <body>
+    <body onload=display_ct();>
         <h1>A Bank of Time.</h1>
         <h2>Electronic Time Capsules Storage</h2>
-
+        Time now is: <span style="background-color: #FFFF00" id='ct' ></span>
+        <br>
+        
+        
         <a href="Orbital-Create.html">Create TimeCapsule</a>
         <a href="Orbital-Open.html">Open TimeCapsule</a>
         <a href="Orbital-Map.html">TimeCapsule Map</a>
+
+        
+
     </body>
 </html>
