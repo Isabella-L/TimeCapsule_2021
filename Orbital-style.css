@@ -1,8 +1,0 @@
-/*CSS file that specify the styles of the whole website*/
-/*Take note priorities depends only on specificity*/
-
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    color: rgb(0, 0, 0);
-    text-align: center;
-}
